@@ -1,0 +1,11 @@
+<div class="todo-detail">
+    <div>
+        <h1>Todo detail</h1>
+        <p>Id: {{todo.id}}</p>
+        <p>Text: {{todo.text}}</p>
+        <p>Completed: {{todo.completed}}</p>
+    </div>
+    <div>
+        <button (click)="handleDelete(todo.id)">Delete</button>
+    </div>
+</div>

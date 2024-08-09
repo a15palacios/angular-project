@@ -29,12 +29,14 @@ export class TodosComponent implements OnInit{
   async ngOnInit(){
     this.apiService.log(); // Llamada al service importado arriba
 
-   const data = await this.apiService.getTodos()
+    const loadedTodos: Todos[] = this.apiService.todos;
+    // const data = !!loadedTodos.length ? loadedTodos :  await this.apiService.getTodos();
+    const data =  await this.apiService.getTodos();
 
-   this.todosList = data;
-   this.stateService.setTodos(data)
+    this.todosList = data;
+    this.stateService.setTodos(data)
 
-   this.stateService.todosState$.subscribe(todos => {
+    this.stateService.todosState$.subscribe(todos => {
     this.todosList = todos;
   });
    

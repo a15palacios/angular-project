@@ -6,11 +6,12 @@ import { CounterComponent } from './components/counter/counter.component';
 import { TodosComponent } from './components/todos/todos.component';
 import {ApiRestService}   from './services/todos/api-rest.service';
 import {CharactersComponent}   from './components/rick-morty/characters/characters.component';
+import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, GetFocusDirective, BackgroundDirective, CounterComponent, TodosComponent, CharactersComponent],
+  imports: [CommonModule, GetFocusDirective, BackgroundDirective, CounterComponent, TodosComponent, CharactersComponent, RouterOutlet, RouterLink, RouterLinkActive],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

@@ -1,8 +1,6 @@
 <div class="characters-list">
     @if(characters.length !== 0){
-        <div *ngFor="let character of characters; let i = index">
-            <p>{{character.name | colorChange}}</p>
-        </div>
+        <app-character *ngFor="let character of characters; let i = index" [character]="character" (delete)="deleteCharacter(character.id)" />
     }@else {
         <p>No hay personajes</p>
     }

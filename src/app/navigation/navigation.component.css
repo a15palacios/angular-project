@@ -1,0 +1,15 @@
+nav {
+  display: flex ;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2em;
+  background-color: yellowgreen;
+  color: white;
+  gap: 1em;
+}
+
+.active {
+  text-decoration: none;
+  pointer-events: none;
+  color: white;
+}
