@@ -1,0 +1,25 @@
+<section class="tabs">
+    <button class="tab" (click)="handleTabChange('all')" [class.active]="currentTab === 'all'" >All</button>
+    <button class="tab" (click)="handleTabChange('completed')" [class.active]="currentTab === 'completed'" >Completed</button>
+    <button class="tab" (click)="handleTabChange('uncompleted')" [class.active]="currentTab === 'uncompleted'" >Uncompleted</button>
+</section>
+
+<section class="todo-list">
+    <div *ngFor="let todo of todosList | filter: currentTab; let i = index">
+        <app-todos-item 
+            [todo]="todo" 
+            (buttonComplete)="completeAction($event)" 
+            (buttonDelete)="deleteAction($event)"
+        />
+    </div>
+</section>
+
+<!-- <section class="todo-list">
+    <div *ngFor="let todo of todosList; let i = index">
+        <app-todos-item 
+            [todo]="todo" 
+            (buttonComplete)="buttonComplete.emit($event)" 
+            (buttonDelete)="buttonDelete.emit($event)"
+        />
+    </div>
+</section> -->

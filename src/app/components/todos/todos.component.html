@@ -1,0 +1,20 @@
+<div class="todos-app">
+    <app-todos-add 
+        [addTodoText]="addTodoText" 
+        (buttonCreate)="handleAddTodo($event)"
+    />
+
+    <app-todos-list 
+        [todosList]="todosList" 
+        (buttonDelete)="handleDelete($event)" 
+        (buttonComplete)="handleComplete($event)"
+    />
+</div>
+
+<div>
+    <pre>
+        <h3>{{today | date: 'YYYY/MM/dd'}}</h3>
+        <p>{{'prueba' | capitalize}}</p>
+        {{(todosList | json)}}  <!-- json pipe, te transforma un json en un string para mostrarlo. La etiqueta <pre> te respeta los saltos de linea. Hay varios pipes de angular propios -->
+    </pre>
+</div>

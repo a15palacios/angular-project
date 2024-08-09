@@ -1,0 +1,20 @@
+.todo-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+    .todo-text{
+        &.completed{
+            text-decoration: line-through;
+        }
+    }
+    .todo-text{
+        width: 50%;
+        margin-right: 15px;
+    }
+    button{
+        padding: 10px;
+        margin-left: 15px;
+    }
+}

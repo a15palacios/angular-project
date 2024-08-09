@@ -1,0 +1,11 @@
+<div class="todo-item">
+    <span class="todo-text {{todo.completed ? 'completed' : 'uncompleted'}}">{{todo.text}}</span>
+    <!-- <input type="checkbox" [(ngModel)]="todo.completed">  Esto seria otra forma de hacerlo como la linea de abajo, pero nos ahorramos la funcion del change puesto que ngModel lo hace solo por detras-->
+    <input type="checkbox" (change)="completeAction(todo)" [value]="todo.completed">
+    <button class="complete-button" (click)="deleteAction(todo.id)">Delete</button>
+</div>
+
+
+<pre>
+    <!-- {{ todos | json}} -->
+</pre>

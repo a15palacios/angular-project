@@ -1,0 +1,1 @@
+export type FilterTodos = 'all' | 'completed' | 'uncompleted';

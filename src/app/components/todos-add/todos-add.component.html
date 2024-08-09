@@ -1,0 +1,6 @@
+<section class="add-todo">
+    <form (ngSubmit)="createAction(text)" class="todo-create-form">
+        <input name="todoText" type="text" placeholder="add new todo" [(ngModel)]="text" class="todo-create-input">
+        <button class="submit-button" type="submit">Add Todo</button>
+    </form>
+</section>
